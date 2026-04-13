@@ -39,3 +39,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+\n# captured assets\n/assets/images/\n/assets/icons/\n/assets/docs/\n/content/next-data.json
