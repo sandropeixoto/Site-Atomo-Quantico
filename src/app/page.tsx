@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { getHomeContent } from "@/lib/content";
 
 export default function Home() {
-  const { meta, sections } = getHomeContent();
+  const { sections } = getHomeContent();
 
   return (
     <main className="min-h-screen bg-cosmic-dark text-white selection:bg-quantum-violet selection:text-white">
