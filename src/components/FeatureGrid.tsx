@@ -27,33 +27,41 @@ const FeatureGrid = ({ sections }: FeatureGridProps) => {
   return (
     <section id="servicos" className="py-24 px-6 bg-cosmic-dark relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-black">Nossos <span className="text-gradient">Serviços Quânticos</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+        <div className="text-center mb-24 space-y-6">
+          <h2 className="text-5xl md:text-6xl font-black tracking-tighter">Nossos <span className="text-gradient">Serviços Quânticos</span></h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
             Combinamos técnicas ancestrais com tecnologia moderna para fornecer clareza no seu caminho evolutivo.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="glass p-8 rounded-3xl space-y-4 hover:border-quantum-violet/50 transition-all group"
+              className="glass p-10 rounded-none space-y-6 hover:border-quantum-violet/40 transition-all group relative overflow-hidden"
             >
-              <div className={`w-12 h-12 glass rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-quantum-violet/5 -rotate-45 translate-x-12 -translate-y-12"></div>
+              
+              <div className={`w-14 h-14 glass rounded-none flex items-center justify-center mb-8 group-hover:bg-quantum-violet/10 group-hover:scale-110 transition-all duration-500`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold">{feature.title}</h3>
-              <div className="text-gray-400 text-sm leading-relaxed line-clamp-4 prose prose-invert">
+              <h3 className="text-2xl font-black tracking-tight">{feature.title}</h3>
+              <div className="text-gray-400 text-base leading-relaxed line-clamp-4 prose prose-invert">
                 <ReactMarkdown>{feature.description}</ReactMarkdown>
               </div>
-              <div className="pt-4">
-                <a href={feature.link} className="text-quantum-cyan text-sm font-bold hover:underline">Ver Detalhes →</a>
+              <div className="pt-6">
+                <a 
+                  href={feature.link} 
+                  aria-label={`Saber mais sobre ${feature.title}`}
+                  className="text-quantum-cyan text-sm font-black tracking-widest uppercase hover:text-white transition-colors flex items-center gap-2 group/link min-h-[44px]"
+                >
+                  Ver Detalhes <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+                </a>
               </div>
             </motion.div>
           ))}

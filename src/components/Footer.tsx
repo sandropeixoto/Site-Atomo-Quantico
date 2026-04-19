@@ -6,46 +6,48 @@ const Footer = () => {
   return (
     <footer className="bg-cosmic-dark border-t border-white/10 pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        <div className="space-y-4">
-          <h3 className="font-bold text-xl">Átomo <span className="text-quantum-cyan">Quântico</span></h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
+        <div className="space-y-6">
+          <h3 className="font-black text-2xl tracking-tighter">Átomo <span className="text-quantum-cyan">Quântico</span></h3>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Desvendando os mistérios da espiritualidade e do autoconhecimento para guiar sua jornada de elevação cósmica.
           </p>
           <div className="flex items-center gap-4 pt-2">
-            <Link href="#" className="p-2 glass rounded-full hover:text-quantum-cyan transition-colors"><Instagram size={18} /></Link>
-            <Link href="#" className="p-2 glass rounded-full hover:text-quantum-cyan transition-colors"><Youtube size={18} /></Link>
-            <Link href="#" className="p-2 glass rounded-full hover:text-quantum-cyan transition-colors"><Facebook size={18} /></Link>
+            <Link href="#" aria-label="Seguir no Instagram" className="p-3 glass rounded-none hover:text-quantum-cyan transition-all min-h-[44px] flex items-center justify-center"><Instagram size={20} /></Link>
+            <Link href="#" aria-label="Inscrever-se no Youtube" className="p-3 glass rounded-none hover:text-quantum-cyan transition-all min-h-[44px] flex items-center justify-center"><Youtube size={20} /></Link>
+            <Link href="#" aria-label="Curtir no Facebook" className="p-3 glass rounded-none hover:text-quantum-cyan transition-all min-h-[44px] flex items-center justify-center"><Facebook size={20} /></Link>
           </div>
         </div>
 
         <div>
-          <h4 className="font-bold mb-6">Links Úteis</h4>
+          <h4 className="font-black mb-8 uppercase text-xs tracking-[0.3em]">Links Úteis</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/descubra-seu-signo" className="hover:text-white transition-colors">Signos</Link></li>
-            <li><Link href="#servicos" className="hover:text-white transition-colors">Serviços</Link></li>
-            <li><Link href="https://atomoquantico.com/listavip" className="hover:text-white transition-colors">Lista VIP</Link></li>
+            <li><Link href="/" className="hover:text-white transition-colors min-h-[44px] flex items-center">Home</Link></li>
+            <li><Link href="/descubra-seu-signo" className="hover:text-white transition-colors min-h-[44px] flex items-center">Signos</Link></li>
+            <li><Link href="#servicos" className="hover:text-white transition-colors min-h-[44px] flex items-center">Serviços</Link></li>
+            <li><Link href="https://atomoquantico.com/listavip" className="hover:text-white transition-colors min-h-[44px] flex items-center">Lista VIP</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-bold mb-6">Comunidade</h4>
+          <h4 className="font-black mb-8 uppercase text-xs tracking-[0.3em]">Comunidade</h4>
           <ul className="space-y-4 text-sm text-gray-400">
-            <li><Link href="https://wa.me/5591999827779" className="flex items-center gap-2 hover:text-quantum-cyan transition-colors"><MessageCircle size={16} /> WhatsApp</Link></li>
-            <li><Link href="#" className="flex items-center gap-2 hover:text-quantum-cyan transition-colors"><Mail size={16} /> Newsletter</Link></li>
+            <li><Link href="https://wa.me/5591999827779" aria-label="Falar conosco no WhatsApp" className="flex items-center gap-3 hover:text-quantum-cyan transition-colors min-h-[44px]"><MessageCircle size={18} /> WhatsApp</Link></li>
+            <li><Link href="#" aria-label="Assinar Newsletter" className="flex items-center gap-3 hover:text-quantum-cyan transition-colors min-h-[44px]"><Mail size={18} /> Newsletter</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-bold mb-6">Assine Nossa Newsletter</h4>
-          <p className="text-sm text-gray-400 mb-4">Receba insights astrológicos e previsões semanais no seu e-mail.</p>
-          <form className="flex gap-2">
+          <h4 className="font-black mb-8 uppercase text-xs tracking-[0.3em]">Insights Quânticos</h4>
+          <p className="text-sm text-gray-400 mb-6">Receba insights astrológicos e previsões semanais no seu e-mail.</p>
+          <form className="flex flex-col gap-3">
+            <label htmlFor="footer-email" className="sr-only">Seu e-mail</label>
             <input 
+              id="footer-email"
               type="email" 
               placeholder="Seu melhor e-mail" 
-              className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm flex-1 focus:outline-none focus:border-quantum-cyan transition-colors"
+              className="bg-white/5 border border-white/10 rounded-none px-4 py-3 text-sm flex-1 focus:outline-none focus:border-quantum-cyan transition-colors min-h-[44px]"
             />
-            <button className="bg-quantum-cyan text-cosmic-dark font-bold px-4 py-2 rounded-lg text-sm hover:bg-opacity-80 transition-all">OK</button>
+            <button aria-label="Confirmar inscrição na newsletter" className="bg-quantum-cyan text-white font-black px-6 py-3 rounded-none text-xs tracking-widest uppercase hover:bg-opacity-80 transition-all min-h-[44px]">Assinar Agora</button>
           </form>
         </div>
       </div>

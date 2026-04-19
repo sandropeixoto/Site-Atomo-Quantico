@@ -27,12 +27,12 @@ const Hero = ({ title, subtitle }: HeroProps) => {
       {/* Content */}
       <div className="relative z-10 max-w-4xl text-center space-y-8">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
-          className="inline-block p-1 rounded-full bg-gradient-to-r from-quantum-violet to-quantum-cyan mb-4"
+          className="inline-block p-[1px] bg-gradient-to-r from-quantum-violet to-quantum-cyan mb-6"
         >
-          <div className="bg-cosmic-dark rounded-full px-6 py-2 text-xs font-bold tracking-widest uppercase">
+          <div className="bg-cosmic-dark px-8 py-2 text-[10px] font-black tracking-[0.4em] uppercase">
             {title}
           </div>
         </motion.div>
@@ -41,7 +41,7 @@ const Hero = ({ title, subtitle }: HeroProps) => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-5xl md:text-8xl font-black text-gradient leading-tight"
+          className="text-6xl md:text-9xl font-black text-gradient leading-[0.85] tracking-tighter"
         >
           Sua Jornada de <br /> Elevação Cósmica
         </motion.h1>
@@ -50,7 +50,7 @@ const Hero = ({ title, subtitle }: HeroProps) => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-medium"
         >
           {subtitle}
         </motion.p>
@@ -59,18 +59,20 @@ const Hero = ({ title, subtitle }: HeroProps) => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10"
         >
           <a 
             href="#descobrir" 
-            className="w-full sm:w-auto bg-white text-cosmic-dark font-black px-10 py-4 rounded-xl text-lg hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            aria-label="Começar jornada de descoberta"
+            className="w-full sm:w-auto bg-white text-black font-black px-12 py-5 rounded-none text-xl hover:bg-quantum-cyan hover:text-white transition-all shadow-2xl flex items-center justify-center min-h-[44px]"
           >
             Começar Agora
           </a>
           <a 
             href="https://wa.me/5591999827779" 
             target="_blank"
-            className="w-full sm:w-auto glass text-white font-bold px-10 py-4 rounded-xl text-lg hover:bg-white/10 transition-all"
+            aria-label="Falar com um guia via WhatsApp"
+            className="w-full sm:w-auto glass text-white font-bold px-12 py-5 rounded-none text-xl hover:bg-white/10 transition-all flex items-center justify-center min-h-[44px]"
           >
             Falar com Guia
           </a>

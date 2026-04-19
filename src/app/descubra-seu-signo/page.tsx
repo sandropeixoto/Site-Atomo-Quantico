@@ -31,24 +31,29 @@ export default function ZodiacPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {signsData.map((sign, index) => (
-              <div key={index} className="glass p-8 rounded-3xl border-white/5 hover:border-quantum-violet/30 transition-all group">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 glass rounded-full flex items-center justify-center text-quantum-cyan group-hover:scale-110 transition-transform">
-                    <Star size={20} />
+              <div key={index} className="glass p-10 rounded-none border-white/5 hover:border-quantum-violet/40 transition-all group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-quantum-violet/5 -rotate-45 translate-x-12 -translate-y-12"></div>
+                
+                <div className="flex items-center justify-between mb-8">
+                  <div className="w-14 h-14 glass rounded-none flex items-center justify-center text-quantum-cyan group-hover:bg-quantum-cyan/10 group-hover:scale-110 transition-all duration-500">
+                    <Star size={24} />
                   </div>
-                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase bg-white/5 border border-white/10 px-3 py-1 rounded-full opacity-60">
-                    Elemento {sign.element}
+                  <span className="text-[10px] font-black tracking-[0.3em] uppercase bg-white/5 border border-white/10 px-4 py-1.5 rounded-none opacity-50">
+                    {sign.element}
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{sign.name}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                <h3 className="text-3xl font-black mb-4 tracking-tight">{sign.name}</h3>
+                <p className="text-gray-300 text-base leading-relaxed mb-8">
                   {sign.desc}
                 </p>
-                <div className="pt-4 border-t border-white/5">
-                  <button className="text-xs font-bold tracking-widest uppercase hover:text-quantum-cyan transition-colors">
-                    Ler Análise Completa →
+                <div className="pt-6 border-t border-white/5">
+                  <button 
+                    aria-label={`Ler análise completa do signo ${sign.name}`}
+                    className="text-xs font-black tracking-[0.3em] uppercase hover:text-quantum-cyan transition-colors flex items-center gap-2 group/btn min-h-[44px]"
+                  >
+                    Análise Completa <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
                   </button>
                 </div>
               </div>

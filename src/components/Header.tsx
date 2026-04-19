@@ -26,18 +26,19 @@ const Header = () => {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-sm font-medium hover:text-quantum-violet transition-colors">Home</Link>
-          <Link href="/descubra-seu-signo" className="text-sm font-medium hover:text-quantum-violet transition-colors">Signos</Link>
-          <Link href="#servicos" className="text-sm font-medium hover:text-quantum-violet transition-colors">Serviços</Link>
-          <Link href="#contato" className="text-sm font-medium hover:text-quantum-violet transition-colors">Contato</Link>
+        <nav className="hidden md:flex items-center gap-4">
+          <Link href="/" aria-label="Ir para a página inicial" className="px-3 py-2 text-sm font-medium hover:text-quantum-violet transition-colors min-h-[44px] flex items-center">Home</Link>
+          <Link href="/descubra-seu-signo" aria-label="Conheça os signos do zodíaco" className="px-3 py-2 text-sm font-medium hover:text-quantum-violet transition-colors min-h-[44px] flex items-center">Signos</Link>
+          <Link href="#servicos" aria-label="Nossos serviços" className="px-3 py-2 text-sm font-medium hover:text-quantum-violet transition-colors min-h-[44px] flex items-center">Serviços</Link>
+          <Link href="#contato" aria-label="Entre em contato" className="px-3 py-2 text-sm font-medium hover:text-quantum-violet transition-colors min-h-[44px] flex items-center">Contato</Link>
         </nav>
 
         <div className="flex items-center gap-4">
           <Link 
             href="https://atomoquantico.com/listavip"
             target="_blank"
-            className="bg-quantum-violet hover:bg-opacity-80 text-white px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105"
+            aria-label="Participar da Lista VIP"
+            className="bg-quantum-violet hover:bg-opacity-90 text-white px-6 py-2.5 rounded-none text-sm font-bold transition-all transform hover:-translate-y-1 active:scale-95 flex items-center justify-center min-h-[44px]"
           >
             Lista VIP
           </Link>
